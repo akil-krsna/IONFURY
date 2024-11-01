@@ -94,7 +94,7 @@ SECTOR_DATA = {
     ),
     7: dict(
         floor_h=-0.3, ceil_h=2.00,
-        floor_tex_id=FlatTexID.TEST_1, ceil_tex_id=FlatTexID.TEST_1
+        floor_tex_id=FlatTexID.TEST_1, ceil_tex_id=FlatTexID.TEST_4
     )
 }
 
@@ -143,8 +143,8 @@ SEGMENTS_OF_SECTOR_BOUNDARIES = [
     [(P_30, P_29), (2, 6), (WallTexID.TEST_1, WallTexID.TEST_5, WallTexID.TEST_1)],
     [(P_27, P_30), (2, 6), (WallTexID.TEST_1, WallTexID.TEST_5, WallTexID.TEST_1)],
     # sector 7 (door)
-    [(P_32, P_33), (7, _), (_, WallTexID.TEST_2, _)],
-    [(P_34, P_31), (7, _), (_, WallTexID.TEST_2, _)],
+    [(P_32, P_33), (7, _), (_, WallTexID.TEST_0, _)],
+    [(P_34, P_31), (7, _), (_, WallTexID.TEST_0, _)],
 ]
 
 
