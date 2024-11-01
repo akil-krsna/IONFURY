@@ -1,5 +1,6 @@
 from settings import *
 
+tint = ray.Color(255, 255, 255, 255)
 
 class Camera:
     def __init__(self, engine):
@@ -22,6 +23,23 @@ class Camera:
         self.right = vec3(0)
         #
         self.pitch = 0.0
+        #
+        self.gun_image = self.load_gun_image()
+        
+    def load_gun_image(self):
+        return ray.load_texture('assets\weapons\300px-v_shotgun.png') 
+    
+    def render(self):
+        self.render_gun()  
+    
+    def render_gun(self):
+        gun_position = (WIN_WIDTH * 0.5, WIN_HEIGHT * 0.75)
+    
+        # Check if scaling is required and handled directly by scaling the image at load time
+        scaled_gun_image = ray.load_texture('assets/weapons/300px-v_shotgun.png')  # Pre-scaled image, if needed
+        # Draw gun without width/height arguments
+        ray.draw_texture(self.gun_image, int(gun_position[0]), int(gun_position[1]), tint )
+
 
     def set_yaw(self):
         delta_yaw = -ray.get_mouse_delta().x * self.rot_speed

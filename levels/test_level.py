@@ -73,12 +73,12 @@ SECTOR_DATA = {
     ),
     2: dict(
         floor_h=-0.5, ceil_h=3.0,
-        floor_tex_id=FlatTexID.TEST_1, ceil_tex_id=FlatTexID.TEST_5,
+        floor_tex_id=FlatTexID.TEST_4, ceil_tex_id=FlatTexID.TEST_5,
         nested_sector_ids=[6, ],
     ),
     3: dict(
         floor_h=0.25, ceil_h=1.75,
-        floor_tex_id=FlatTexID.TEST_1, ceil_tex_id=FlatTexID.TEST_1
+        floor_tex_id=FlatTexID.TEST_4, ceil_tex_id=FlatTexID.TEST_4
     ),
     4: dict(
         floor_h=-0.5, ceil_h=3.5, nested_sector_ids=[5, ],
@@ -94,7 +94,7 @@ SECTOR_DATA = {
     ),
     7: dict(
         floor_h=-0.3, ceil_h=2.00,
-        floor_tex_id=FlatTexID.TEST_1, ceil_tex_id=FlatTexID.TEST_4
+        floor_tex_id=FlatTexID.TEST_4, ceil_tex_id=FlatTexID.TEST_4
     )
 }
 

@@ -8,7 +8,7 @@ class App:
     ray.set_trace_log_level(ray.LOG_ERROR)
     ray.set_config_flags(ray.FLAG_MSAA_4X_HINT)
     #
-    ray.init_window(WIN_WIDTH, WIN_HEIGHT, 'BSP Engine')
+    ray.init_window(WIN_WIDTH, WIN_HEIGHT, 'Quake Level Engine')
     # ray.set_target_fps(600)
     #
     ray.hide_cursor()

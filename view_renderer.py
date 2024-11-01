@@ -2,7 +2,6 @@ from settings import *
 from models import Models, WallModel
 from data_types import *
 
-
 class ViewRenderer:
     def __init__(self, engine):
         self.engine = engine
@@ -51,6 +50,9 @@ class ViewRenderer:
         # draw portal_mid walls from back to front
         for wall in reversed(self.mid_walls_to_draw.values()):
             ray.draw_model(wall.model, VEC3_ZERO, 1.0, self.get_tint(wall))
+
+        # Draw the gun from the player's POV
+        self.camera.render()
 
     def get_tint(self, wall: WallModel):
         if wall.is_shaded:
